@@ -33,6 +33,12 @@ class BirdsController < ApplicationController
     head :no_content
   end
 
+  #create 
+  def create
+    bird = Bird.create(bird_params)
+    render json: bird
+  end
+
   private
 
   def find_bird
